@@ -1,0 +1,21 @@
+[project]
+name = "2026codex"
+version = "0.1.0"
+description = "Workspace for artificial stone Lab color-difference data generation."
+requires-python = ">=3.11"
+dependencies = [
+  "openpyxl>=3.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "tests",
+]
+pythonpath = [
+  ".",
+]
