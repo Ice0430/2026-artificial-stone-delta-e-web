@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CIE94 Delta E Calculator</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="workspace" aria-labelledby="page-title">
+      <div class="title-row">
+        <div>
+          <p class="eyebrow">LAB 色差計算</p>
+          <h1 id="page-title">CIE94 Delta E</h1>
+        </div>
+        <span class="status-pill" id="formula-status">CIE94</span>
+      </div>
+
+      <form class="calculator" id="delta-form">
+        <fieldset class="control-panel">
+          <legend>條件</legend>
+          <label>
+            工序
+            <select name="process" id="process-select">
+              <option value="cnc">CNC</option>
+              <option value="sandblasting">噴砂</option>
+            </select>
+          </label>
+          <label>
+            光源 / UV
+            <select name="condition" id="condition-select">
+              <option value="f2_0uv">F2-10 / 0%UV</option>
+              <option value="d65_0uv">D65-10 / 0%UV</option>
+              <option value="f2_100uv">F2-10 / 100%UV</option>
+              <option value="d65_100uv">D65-10 / 100%UV</option>
+            </select>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>標準值</legend>
+          <label>
+            L*
+            <input type="number" step="0.01" name="standardL" readonly>
+          </label>
+          <label>
+            a*
+            <input type="number" step="0.01" name="standardA" readonly>
+          </label>
+          <label>
+            b*
+            <input type="number" step="0.01" name="standardB" readonly>
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>樣品值</legend>
+          <label>
+            L*
+            <input type="number" step="0.01" name="sampleL" value="97.80" required>
+          </label>
+          <label>
+            a*
+            <input type="number" step="0.01" name="sampleA" value="-0.05" required>
+          </label>
+          <label>
+            b*
+            <input type="number" step="0.01" name="sampleB" value="-0.09" required>
+          </label>
+        </fieldset>
+
+        <div class="actions">
+          <button type="submit">計算</button>
+          <button type="button" class="secondary" id="clear-button">清空樣品值</button>
+        </div>
+      </form>
+
+      <section class="result-panel" aria-live="polite">
+        <div>
+          <p class="result-label">CIE94 Delta E</p>
+          <output id="delta-result">--</output>
+        </div>
+        <dl>
+          <div>
+            <dt>Delta L</dt>
+            <dd id="delta-l">--</dd>
+          </div>
+          <div>
+            <dt>Delta a</dt>
+            <dd id="delta-a">--</dd>
+          </div>
+          <div>
+            <dt>Delta b</dt>
+            <dd id="delta-b">--</dd>
+          </div>
+          <div>
+            <dt>Delta C</dt>
+            <dd id="delta-c">--</dd>
+          </div>
+          <div>
+            <dt>Delta H</dt>
+            <dd id="delta-h">--</dd>
+          </div>
+          <div>
+            <dt>CIE76 dE</dt>
+            <dd id="delta-e-76">--</dd>
+          </div>
+        </dl>
+      </section>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
