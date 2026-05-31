@@ -6,7 +6,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-LAB_DIR = ROOT / "人造石色差"
+LAB_DIR = ROOT / "lab-generator"
 SCRIPT_PATH = LAB_DIR / "generate_lab_from_reference.py"
 
 
@@ -30,5 +30,5 @@ def test_generator_default_paths():
     module = load_generator_module()
 
     assert module.DEFAULT_REFERENCE_NAME == "0418"
-    assert module.DATA_DIR == Path("人造石色差") / "data"
-    assert module.OUTPUT_DIR == Path("人造石色差") / "output"
+    assert module.DATA_DIR == Path("lab-generator") / "data"
+    assert module.OUTPUT_DIR == Path("lab-generator") / "output"

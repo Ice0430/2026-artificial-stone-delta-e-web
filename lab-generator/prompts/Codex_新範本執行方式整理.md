@@ -1,4 +1,4 @@
-# Codex 新範本執行方式整理
+﻿# Codex 新範本執行方式整理
 
 本文整理目前讓 Codex 執行「人造石色差 Lab 數據生成任務」的 4 種方式。
 
@@ -22,7 +22,7 @@ V3
 0420
 
 本次參考範本路徑：
-G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
+G:\我的雲端硬碟\2026人造石色差\lab-generator\data\0420.csv
 
 ...
 ```
@@ -51,7 +51,7 @@ G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
 將完整 V3 規則存成固定指令檔：
 
 ```text
-人造石色差/instructions/V3_生成色差規則.md
+lab-generator/instructions/V3_生成色差規則.md
 ```
 
 之後只需要告訴 Codex 去讀這份檔案，再指定本次範本名稱。
@@ -62,7 +62,7 @@ G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
 請依照固定指令檔執行人造石色差 Lab 數據生成任務。
 
 指令檔：
-人造石色差/instructions/V3_生成色差規則.md
+lab-generator/instructions/V3_生成色差規則.md
 
 本次範本名稱：
 0420
@@ -91,13 +91,13 @@ G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
 將常用的短指令存放在：
 
 ```text
-人造石色差/prompts/
+lab-generator/prompts/
 ```
 
 例如建立：
 
 ```text
-人造石色差/prompts/執行V3生成色差_短指令.md
+lab-generator/prompts/執行V3生成色差_短指令.md
 ```
 
 內容範例：
@@ -106,7 +106,7 @@ G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
 請依照固定指令檔執行人造石色差 Lab 數據生成任務。
 
 指令檔：
-人造石色差/instructions/V3_生成色差規則.md
+lab-generator/instructions/V3_生成色差規則.md
 
 本次範本名稱：
 0418
@@ -178,13 +178,13 @@ G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
 則輸入檔案為：
 
 ```text
-人造石色差/data/0420.csv
+lab-generator/data/0420.csv
 ```
 
 輸出檔案為：
 
 ```text
-人造石色差/output/0420_generated_lab_output.xlsx
+lab-generator/output/0420_generated_lab_output.xlsx
 ```
 
 ### 優點
@@ -213,13 +213,13 @@ G:\我的雲端硬碟\2026Codex\人造石色差\data\0420.csv
 將新範本 CSV 放到：
 
 ```text
-人造石色差/data/
+lab-generator/data/
 ```
 
 例如：
 
 ```text
-人造石色差/data/0420.csv
+lab-generator/data/0420.csv
 ```
 
 ### Step 2：對 Codex 下短指令
@@ -277,7 +277,7 @@ Codex 應完成：
 請依照固定指令檔執行人造石色差 Lab 數據生成任務。
 
 指令檔：
-人造石色差/instructions/V3_生成色差規則.md
+lab-generator/instructions/V3_生成色差規則.md
 
 本次範本名稱：
 0420

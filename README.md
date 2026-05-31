@@ -1,10 +1,10 @@
-# 2026Codex
+# 2026 Artificial Stone Color Difference
 
 Project workspace for artificial stone Lab color-difference data generation.
 
 ## Structure
 
-- `人造石色差/` - Lab data generator, reference CSV files, instructions, prompts, and output files
+- `lab-generator/` - Lab data generator, reference CSV files, instructions, prompts, and local output files
 - `web/delta-e/` - CIE94 Delta E static web calculator for CNC and sandblasting LAB checks
 - `tests/` - project checks
 - `docs/` - setup notes and project decisions
@@ -28,19 +28,19 @@ py -m pip install -e ".[dev]"
 
 ## Run
 
-Generate output from the default reference file, `人造石色差/data/0418.csv`:
+Generate output from the default reference file, `lab-generator/data/0418.csv`:
 
 ```powershell
-py 人造石色差/generate_lab_from_reference.py
+py lab-generator/generate_lab_from_reference.py
 ```
 
 Generate output from another reference name, for example `0420.csv`:
 
 ```powershell
-py 人造石色差/generate_lab_from_reference.py 0420
+py lab-generator/generate_lab_from_reference.py 0420
 ```
 
-The generated Excel file is written to `人造石色差/output/`.
+The generated Excel file is written to `lab-generator/output/`.
 
 ## Web
 

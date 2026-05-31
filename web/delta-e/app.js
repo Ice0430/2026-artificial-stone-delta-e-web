@@ -28,8 +28,6 @@ const result = document.querySelector("#delta-result");
 const deltaL = document.querySelector("#delta-l");
 const deltaA = document.querySelector("#delta-a");
 const deltaB = document.querySelector("#delta-b");
-const deltaC = document.querySelector("#delta-c");
-const deltaH = document.querySelector("#delta-h");
 const deltaE76 = document.querySelector("#delta-e-76");
 const processSelect = document.querySelector("#process-select");
 const conditionSelect = document.querySelector("#condition-select");
@@ -89,8 +87,6 @@ function calculateCie94({ standard, sample }) {
     dl,
     da,
     db,
-    dc,
-    dh,
     de76,
   };
 }
@@ -108,8 +104,6 @@ function render(delta) {
   deltaL.textContent = formatNumber(delta.dl);
   deltaA.textContent = formatNumber(delta.da);
   deltaB.textContent = formatNumber(delta.db);
-  deltaC.textContent = formatNumber(delta.dc);
-  deltaH.textContent = formatNumber(delta.dh);
   deltaE76.textContent = formatNumber(delta.de76);
 }
 
@@ -133,7 +127,7 @@ clearButton.addEventListener("click", () => {
   form.elements.sampleL.value = "";
   form.elements.sampleA.value = "";
   form.elements.sampleB.value = "";
-  render({ value: NaN, dl: NaN, da: NaN, db: NaN, dc: NaN, dh: NaN, de76: NaN });
+  render({ value: NaN, dl: NaN, da: NaN, db: NaN, de76: NaN });
 });
 
 calculateFromForm();

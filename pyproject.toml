@@ -1,5 +1,5 @@
 [project]
-name = "2026codex"
+name = "artificial-stone-color-difference"
 version = "0.1.0"
 description = "Workspace for artificial stone Lab color-difference data generation."
 requires-python = ">=3.11"

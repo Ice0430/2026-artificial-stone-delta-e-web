@@ -26,13 +26,13 @@ py -m pip install -e ".[dev]"
 Run the default Lab data generator:
 
 ```powershell
-py 人造石色差/generate_lab_from_reference.py
+py lab-generator/generate_lab_from_reference.py
 ```
 
 Run with a specific reference name:
 
 ```powershell
-py 人造石色差/generate_lab_from_reference.py 0420
+py lab-generator/generate_lab_from_reference.py 0420
 ```
 
 Run tests:

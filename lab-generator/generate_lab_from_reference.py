@@ -15,7 +15,7 @@ from openpyxl import Workbook
 N = 100
 DEFAULT_REFERENCE_NAME = "0418"
 RANDOM_SEED = None
-LAB_ROOT = Path("人造石色差")
+LAB_ROOT = Path("lab-generator")
 DATA_DIR = LAB_ROOT / "data"
 OUTPUT_DIR = LAB_ROOT / "output"
 MAX_ATTEMPTS_MULTIPLIER = 200
