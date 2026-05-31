@@ -5,6 +5,7 @@ Project workspace for artificial stone Lab color-difference data generation.
 ## Structure
 
 - `人造石色差/` - Lab data generator, reference CSV files, instructions, prompts, and output files
+- `web/delta-e/` - CIE94 Delta E static web calculator for CNC and sandblasting LAB checks
 - `tests/` - project checks
 - `docs/` - setup notes and project decisions
 - `.agents/skills/stone-lab-generator/` - Codex skill for the Lab generation workflow
@@ -40,6 +41,12 @@ py 人造石色差/generate_lab_from_reference.py 0420
 ```
 
 The generated Excel file is written to `人造石色差/output/`.
+
+## Web
+
+The CIE94 Delta E calculator is in `web/delta-e/`.
+
+It is a static web page that can be deployed to GitHub Pages or another static hosting service.
 
 ## Test
 
